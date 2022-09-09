@@ -1,0 +1,104 @@
+.container {
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+  height: 80vh;
+}
+
+.search {
+  text-align: center;
+  margin: 1rem;
+}
+.search input {
+  max-width: 500px;
+  width: 100%;
+  background-color: rgba(194, 172, 172, 0.539);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  text-align: center;
+}
+.upperSec {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-radius: 0.2rem;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.weatherData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: rgb(250, 250, 250);
+  font-size: 2.4rem;
+}
+.location {
+  background-color: rgba(0, 0, 0, 0.485);
+  padding: 1rem;
+  color: rgb(250, 250, 250);
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+.temprture {
+  color: rgb(250, 250, 250);
+  font-size: 4rem;
+  font-weight: 1000;
+}
+
+.lowerSec {
+  background-color: white;
+}
+
+.moreInfoLabe {
+  background-color: white;
+  text-align: center;
+  color: rgb(7, 85, 103);
+  font-weight: 1000;
+}
+
+.moreInfoContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  margin: auto;
+}
+.moreBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 1rem;
+}
+.sitiuation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+}
+.textBlock {
+  color: rgb(7, 57, 107);
+  font-size: 1.5rem;
+  align-items: center;
+  text-align: center;
+}

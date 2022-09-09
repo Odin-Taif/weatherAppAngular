@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* These are my variables */
+:root {
+  --color-bg: #000000;
+  --color-primary: #ffa500;
+  --color-primary-variant: #384555;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-light: #17355a;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 95%;
+  --transition: all 500ms ease-in-out;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  font-family: Arial, sans-serif, "Franklin Gothic Medium", "Arial Narrow",
+    sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  margin: auto;
+}

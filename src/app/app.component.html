@@ -1,7 +1,88 @@
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input
+      type="text"
+      placeholder="Search city"
+      name="city"
+      [(ngModel)]="cityName"
+    />
+  </form>
+</div>
+
 <div class="container" *ngIf="WeatherData">
-  <div class="upperSec">uppper section</div>
+  <div class="upperSec">
+    <img
+      src="../assets/weatherHot.webp"
+      *ngIf="WeatherData.current_observation.condition.temperature"
+    />
+    15" />
+    <img
+      src="../assets/weatherCold.webp"
+      *ngIf="WeatherData.current_observation.condition.temperature <= 15"
+    />
+    <div class="weatherData">
+      <div class="location">
+        {{ WeatherData.location.city }}
+      </div>
+      <div class="temprture">
+        {{
+          ((WeatherData.current_observation.condition.temperature - 32) * 5) / 9
+            | number: "1.0-0"
+        }}°
+      </div>
+    </div>
+  </div>
+
   <div class="lowerSec">lower section</div>
-  {{ WeatherData.location.city }}
+
+  <h1 class="moreInfoLabe">More Information</h1>
+  <div class="moreInfoContainer">
+    <!-- <div class="moreBlock">
+      <div class="sitiuation">
+        Condition
+        <img
+          src="../assets/temperature-high-solid.svg"
+          width="50px"
+          draggable="false"
+        />
+      </div>
+      <span class="textBlock">
+        {{ WeatherData.current_observation.condition.text }}</span
+      >
+    </div> -->
+    <div class="moreBlock">
+      <div class="sitiuation">
+        <img src="../assets/water-solid.svg" width="50px" draggable="false" />
+        Humdity
+      </div>
+
+      <span class="textBlock">
+        {{ WeatherData.current_observation.atmosphere.humidity }}</span
+      >
+    </div>
+    <div class="moreBlock">
+      <div class="sitiuation">
+        <img src="../assets/wind-solid.svg" width="50px" draggable="false" />
+        Wind Speed
+      </div>
+      <span class="textBlock">
+        {{ WeatherData.current_observation.wind.speed }} m/s</span
+      >
+    </div>
+    <div class="moreBlock">
+      <div class="sitiuation">
+        <img
+          src="../assets/eye-low-vision-solid.svg"
+          width="50px"
+          draggable="false"
+        />
+        Visibility
+      </div>
+      <span class="textBlock">
+        {{ WeatherData.current_observation.atmosphere.visibility }}</span
+      >
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
