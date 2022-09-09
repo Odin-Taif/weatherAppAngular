@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  weatherApiBaseUrl: 'https://yahoo-weather5.p.rapidapi.com/weather',
+  XRapidAPIKeyHeader: 'X-RapidAPI-Key',
+  XRapidAPIKeyValue: '4873ecef87mshfcb68fd6bbe9802p11eba0jsnf94fa8e8005f',
+  XRapidAPIHostHeader: 'X-RapidAPI-Host',
+  XRapidAPIHostValue: 'yahoo-weather5.p.rapidapi.com',
 };
 
 /*
